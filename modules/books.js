@@ -1,16 +1,15 @@
 // require mongoose:
 const mongoose = require('mongoose')
-const { Schema } = mongoose
+
 
 // schema
-const bookSchema = new Schema ({
-    title: String,
-    description: String,
-    year: Number,
-    quantity: Number,
-    imageURL: String
+let bookSchema = new mongoose.Schema ({
+    title: { type: String},
+    description: {type :String},
+    year: {type: Number},
+    quantity: {type: Number},
+    imageURL: {type: String}
 })
 
 // model and export:
-const Book = mongoose.model('Book', bookSchema)
-module.exports = Language
+module.exports = mongoose.model('Book', bookSchema)

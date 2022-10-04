@@ -20,3 +20,8 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
+
+// Listen
+app.listen(process.env.PORT, () => {
+    console.log('Listening on port ', process.env.PORT);
+})
